@@ -1,0 +1,70 @@
+<div class="container flex-class">
+    <div class="utc-container">
+      <div class="utc-date-block flex-class v-flex">
+        <p class="lbl">UTC Date</p>
+        <p class="bold-lbl">{{ currUTCDate | date }}</p>
+      </div>
+      <div class="utc-date-block flex-class v-flex">
+        <p class="lbl">UTC Time</p>
+        <p class="bold-lbl">{{ currUTCTime }}</p>
+      </div>
+      <div class="utc-date-block flex-class v-flex">
+        <p class="lbl">UNIX Time</p>
+        <p class="bold-lbl">{{ unixUTC }}</p>
+      </div>
+
+      <div class="utc-date-block flex-class v-flex">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="sample3" [(ngModel)]="unixStamp">
+              <label class="mdl-textfield__label" for="sample3">Convert Seconds</label>
+            </div>
+      </div>
+      <div class="utc-date-block flex-class v-flex">
+        <p class="lbl">to UTC time & date:</p>
+        <p class="bold-lbl">{{ unixStamp | date:'EEE MMM dd yyyy HH:mm:ss' }}</p>
+      </div>
+      <div class="utc-date-block flex-class v-flex">
+        <p class="lbl">to local time & date:</p>
+        <p class="bold-lbl">{{ unixStamp | date:'EEE MMM dd yyyy HH:mm:ss' }}</p>
+      </div>
+  
+      
+    </div>
+  
+    <div class="localDt-container">
+      <div class="utc-date-block flex-class v-flex">
+        <p class="lbl">local date</p>
+        <p class="bold-lbl">----</p>
+      </div>
+      <div class="utc-date-block flex-class v-flex">
+        <p class="lbl">local time</p>
+        <p class="bold-lbl">----</p>
+      </div>
+      <div class="utc-date-block flex-class v-flex">
+        <p class="lbl">local timezone (UTC+5.5h)</p>
+        <p class="bold-lbl"> Indian Standard</p>
+      </div>
+
+      <div class="utc-date-block flex-class v-flex">
+        <form action="#">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="sample3">
+              <label class="mdl-textfield__label" for="sample3">Convert local YYYY / MM / DD</label>
+            </div>
+          </form>
+      </div>
+      <div class="utc-date-block flex-class v-flex">
+        <p class="lbl">and HH : MM : SS</p>
+        <p class="bold-lbl">----</p>
+      </div>
+      <div class="utc-date-block flex-class v-flex">
+        <p class="lbl">to seconds since epoch:</p>
+        <p class="bold-lbl">----</p>
+      </div>
+  
+  
+    </div>
+  
+  
+  
+  </div>
